@@ -79,16 +79,16 @@ yarn compile
 
 You'll see files `SimpleStorage_sol_SimpleStorage.abi` and `SimpleStorage_sol_SimpleStorage.bin` be created.
 
-5. Compile your Typescript code to Javascript
+5. Run
 
 ```
-ts-node deployTS.ts
+node deploy.js or ts-node deployTS.ts (for TS)
 ```
 
-6. Run your javascript code
+Or if you are using the private key encryption
 
 ```
-node deploy.js
+PRIVATE_KEY_PASSWORD=Your_Password node deploy.js or PRIVATE_KEY_PASSWORD=Your_Password ts-node deployTS.ts (for TS)
 ```
 
 You could also just do `npx ts-node deploy.ts` if you are using npm.
@@ -107,10 +107,17 @@ USE A METAMASK THAT DOESNT HAVE ANY REAL FUNDS IN IT. Just in case you accidenta
 2. Go to [Alchemy](https://alchemy.com/?a=673c802981) and create a new project on the testnet of choice (ie, Sepolia)
 3. Grab your URL associated with the testnet, and place it into your `.env` file.
 4. Make sure you have testnet ETH in your account. You can get some here ([sepolia faucets located here](https://sepoliafaucet.com/)). You should get testnet ETH for the same testnet that you made a project in Alchemy (ie, Sepolia)
+
 5. Run
 
 ```
-node deploy.js
+node deploy.js or ts-node deployTS.ts (for TS)
+```
+
+Or if you are using the private key encryption
+
+```
+PRIVATE_KEY_PASSWORD=Your_Password node deploy.js or PRIVATE_KEY_PASSWORD=Your_Password ts-node deployTS.ts (for TS)
 ```
 
 ### Typescript Differences
