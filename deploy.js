@@ -7,8 +7,11 @@ async function main() {
     const provider = new ethers.JsonRpcProvider(
         process.env.RPC_URL_ALCHEMY_SEPOLIA
     )
+    // You can use your .env to save your Private Keys
     // const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
 
+    // This code assumes that the Key has been encrypted
+    // You can use the previous method if you don't want to use this
     const encryptedJson = fs.readFileSync("./.encryptedKey.json", "UTF8")
     let wallet = await ethers.Wallet.fromEncryptedJson(
         encryptedJson,
